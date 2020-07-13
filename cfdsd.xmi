@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+  <uml:Model name="cfdsd_app" xmi:id="_BZ9XAMT9EeqdQ-4CeNzdHw">
+    <packagedElement name="cfdsd" xmi:id="_BZ9XAcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+      <packagedElement name="app" xmi:id="_BZ9XAsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+        <packagedElement name="data" xmi:id="_BZ9XA8T9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement name="crud" xmi:id="_BZ9XBMT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <packagedElement isAbstract="true" name="AbstractCrud" xmi:id="_BZ9XBcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedTemplateSignature parameter="_BZ9XB8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XBsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+                <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9XCMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XB8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+                  <ownedParameteredElement name="T" owningTemplateParameter="_BZ9XB8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9XB8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XCMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+                </ownedParameter>
+              </ownedTemplateSignature>
+              <ownedAttribute association="_BZ9XOMT9EeqdQ-4CeNzdHw" name="entityClass" type="_BZ9XKsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XCcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="AbstractCrud" visibility="public" xmi:id="_BZ9XCsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" xmi:id="_BZ9XC8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="entityClass" type="_BZ9XKsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XDMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation isAbstract="true" name="getEntityManager" visibility="protected" xmi:id="_BZ9XDcT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-ldMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XDsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="persist" visibility="public" xmi:id="_BZ9XD8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XEMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="entity" xmi:id="_BZ9XEcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="merge" visibility="public" xmi:id="_BZ9XEsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XE8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="entity" xmi:id="_BZ9XFMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="remove" visibility="public" xmi:id="_BZ9XFcT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lnMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XFsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="entity" xmi:id="_BZ9XF8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="find" visibility="public" xmi:id="_BZ9XGMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" xmi:id="_BZ9XGcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="id" type="_BZ9_CsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XGsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="getAll" visibility="public" xmi:id="_BZ9XG8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ9XLcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XHMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="findRange" visibility="public" xmi:id="_BZ9XHcT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ9XLcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XHsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="range" type="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XH8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="count" visibility="public" xmi:id="_BZ9XIMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XIcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement clientDependency="_BZ9XNsT9EeqdQ-4CeNzdHw _BZ9XN8T9EeqdQ-4CeNzdHw" name="CrudMessage" xmi:id="_BZ9XIsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <generalization general="_BZ9XMMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XI8T9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+              <generalization general="_BZ9XBcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XJMT9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+              <ownedOperation name="CrudMessage" visibility="public" xmi:id="_BZ9XJcT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" xmi:id="_BZ9XJsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="entityClass" type="_BZ9XM8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XJ8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="getEntityManager" visibility="protected" xmi:id="_BZ9XKMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-ldMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XKcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="" xmi:id="_BZ9XKsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <templateBinding boundElement="_BZ9XKsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XK8T9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateBinding">
+                <parameterSubstitution templateBinding="_BZ9XK8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XLMT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateParameterSubstitution"/>
+              </templateBinding>
+            </packagedElement>
+            <packagedElement name="" xmi:id="_BZ9XLcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+              <templateBinding boundElement="_BZ9XLcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XLsT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateBinding">
+                <parameterSubstitution formal="_BZ9_M8T9EeqdQ-4CeNzdHw" templateBinding="_BZ9XLsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XL8T9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateParameterSubstitution"/>
+              </templateBinding>
+            </packagedElement>
+            <packagedElement name="" xmi:id="_BZ9XMMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <templateBinding boundElement="_BZ9XMMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XMcT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateBinding">
+                <parameterSubstitution actual="_BZ9_CsT9EeqdQ-4CeNzdHw" templateBinding="_BZ9XMcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XMsT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateParameterSubstitution"/>
+              </templateBinding>
+            </packagedElement>
+            <packagedElement name="" xmi:id="_BZ9XM8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <templateBinding boundElement="_BZ9XM8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XNMT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateBinding">
+                <parameterSubstitution actual="_BZ9_CsT9EeqdQ-4CeNzdHw" templateBinding="_BZ9XNMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XNcT9EeqdQ-4CeNzdHw" xmi:type="uml:TemplateParameterSubstitution"/>
+              </templateBinding>
+            </packagedElement>
+            <packagedElement client="_BZ9XIsT9EeqdQ-4CeNzdHw" supplier="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XNsT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement client="_BZ9XIsT9EeqdQ-4CeNzdHw" supplier="_BZ9_AsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XN8T9EeqdQ-4CeNzdHw" xmi:type="uml:Usage"/>
+            <packagedElement memberEnd="_BZ9XOcT9EeqdQ-4CeNzdHw _BZ9XCcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XOMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+              <ownedEnd association="_BZ9XOMT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9XOMT9EeqdQ-4CeNzdHw" type="_BZ9XBcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XOcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement name="auth" xmi:id="_BZ9XOsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement name="Auth" xmi:id="_BZ9XO8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <ownedOperation name="validate" visibility="public" xmi:id="_BZ9XPMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lnMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XPcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="hash" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XPsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="auth" visibility="public" xmi:id="_BZ9XP8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lnMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XQMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="login" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XQcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="pass" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XQsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement name="model" xmi:id="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement name="CommUnit" xmi:id="_BZ9XRMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          <packagedElement clientDependency="_BZ9-lMT9EeqdQ-4CeNzdHw" name="Destination" xmi:id="_BZ9XRcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          <packagedElement name="Host" xmi:id="_BZ9XRsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+          <packagedElement name="Purpose" xmi:id="_BZ9XR8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          <packagedElement clientDependency="_BZ9-k8T9EeqdQ-4CeNzdHw" name="Source" xmi:id="_BZ9XSMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          <packagedElement name="Tool" xmi:id="_BZ9XScT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          <packagedElement name="t0_Project" xmi:id="_BZ9XSsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <ownedComment annotatedElement="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XS8T9EeqdQ-4CeNzdHw" xmi:type="uml:Comment">
+              <body>Perspectiva interna
+Perspectiva externa
+</body>
+            </ownedComment>
+            <packagedElement isAbstract="true" name="Person" xmi:id="_BZ9XTMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="name" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XTcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement name="Project" xmi:id="_BZ9XTsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="description" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XT8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9XkMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XhsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XUMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9XUcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XkcT9EeqdQ-4CeNzdHw" name="" type="_BZ9XZcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XUsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="2" xmi:id="_BZ9XU8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XVMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XlMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XiMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XVcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9XVsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XlcT9EeqdQ-4CeNzdHw" name="" type="_BZ9XXcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XV8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XWMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XWcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XlsT9EeqdQ-4CeNzdHw" name="" type="_BZ9XcMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XWsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="2" xmi:id="_BZ9XW8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XXMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement clientDependency="_BZ9XjsT9EeqdQ-4CeNzdHw" name="SETool" xmi:id="_BZ9XXcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="name" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XXsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9XksT9EeqdQ-4CeNzdHw" name="" type="_BZ9XZcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XX8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XYMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XYcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XlcT9EeqdQ-4CeNzdHw" name="" type="_BZ9XTsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XYsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="addT" visibility="public" xmi:id="_BZ9XY8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XZMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement clientDependency="_BZ9Xi8T9EeqdQ-4CeNzdHw" name="Collaborator" xmi:id="_BZ9XZcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <generalization general="_BZ9XTMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XZsT9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+              <ownedAttribute name="WorkSchedule" type="_BZ9_PMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XZ8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9XkcT9EeqdQ-4CeNzdHw" name="" type="_BZ9XTsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XaMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9XksT9EeqdQ-4CeNzdHw" name="" type="_BZ9XXcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XacT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XasT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9Xa8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9Xk8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XcMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XbMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9Xl8T9EeqdQ-4CeNzdHw" name="create_message" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XbcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XbsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9Xb8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement name="Site" xmi:id="_BZ9XcMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="description" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XccT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="birth" type="_BZ9_NcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XcsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="timezone" type="_BZ-lmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xc8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute isStatic="true" name="amount_collaborators" type="_BZ-lmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XdMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <defaultValue value="0" xmi:id="_BZ9XdcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralString"/>
+              </ownedAttribute>
+              <ownedAttribute name="geocoors" type="_BZ-lnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XdsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="defaultWorkSchedule" type="_BZ9_PMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xd8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9Xj8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XeMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XecT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XesT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute aggregation="composite" association="_BZ9Xk8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XZcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xe8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XfMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XfcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9XlsT9EeqdQ-4CeNzdHw" name="" type="_BZ9XTsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XfsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="addC" visibility="public" xmi:id="_BZ9Xf8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XgMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="colab" type="_BZ9XZcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XgcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="removeC" visibility="public" xmi:id="_BZ9XgsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9Xg8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="collab" type="_BZ9XZcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XhMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="Collab_actor" xmi:id="_BZ9XhcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            <packagedElement clientDependency="_BZ9XjcT9EeqdQ-4CeNzdHw" name="ExternalEntity" xmi:id="_BZ9XhsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute association="_BZ9XkMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XTsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xh8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement clientDependency="_BZ9XjMT9EeqdQ-4CeNzdHw" name="KnowledgeBase" xmi:id="_BZ9XiMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="data" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XicT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9XlMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XTsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XisT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement client="_BZ9XZcT9EeqdQ-4CeNzdHw" supplier="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9Xi8T9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+            <packagedElement client="_BZ9XiMT9EeqdQ-4CeNzdHw" supplier="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XjMT9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+            <packagedElement client="_BZ9XhsT9EeqdQ-4CeNzdHw" supplier="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XjcT9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+            <packagedElement client="_BZ9XXcT9EeqdQ-4CeNzdHw" supplier="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XjsT9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+            <packagedElement memberEnd="_BZ9XosT9EeqdQ-4CeNzdHw _BZ9XeMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9Xj8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9Xh8T9EeqdQ-4CeNzdHw _BZ9XUMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XkMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XaMT9EeqdQ-4CeNzdHw _BZ9XUsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XkcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XacT9EeqdQ-4CeNzdHw _BZ9XX8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XksT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XbMT9EeqdQ-4CeNzdHw _BZ9Xe8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9Xk8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XisT9EeqdQ-4CeNzdHw _BZ9XVcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XlMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XYsT9EeqdQ-4CeNzdHw _BZ9XV8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XlcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XfsT9EeqdQ-4CeNzdHw _BZ9XWsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9XlsT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9Xr8T9EeqdQ-4CeNzdHw _BZ9XbcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9Xl8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          </packagedElement>
+          <packagedElement clientDependency="_BZ9-FMT9EeqdQ-4CeNzdHw" name="t1_Purpose" xmi:id="_BZ9XmMT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <ownedComment annotatedElement="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XmcT9EeqdQ-4CeNzdHw" xmi:type="uml:Comment">
+              <body>Comando/controle, Ajuste, Rede/Informativo, Social
+Agenda, Consulta ao Orquestrador, Consulta a Stakeholders internos e externos, Entregas, Cancelar ação, Reafirmar/ tornar formal, Ruído, Recalibrar comunicação</body>
+            </ownedComment>
+            <packagedElement name="CollaborationForm" xmi:id="_BZ9XmsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <generalization general="_BZ9XtsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9Xm8T9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+              <ownedAttribute name="name" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="protected" xmi:id="_BZ9XnMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-FsT9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XncT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement name="CommUnit" xmi:id="_BZ9XnsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="destination" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xn8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="source" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XoMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-FcT9EeqdQ-4CeNzdHw" name="" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XocT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9Xj8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XcMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XosT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-FsT9EeqdQ-4CeNzdHw" name="" type="_BZ9XmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xo8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-F8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XpMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute aggregation="shared" association="_BZ9-F8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XpcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9XpsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-GMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xp8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute aggregation="shared" association="_BZ9-GMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XqMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue xmi:id="_BZ9XqcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XqsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-isT9EeqdQ-4CeNzdHw" name="" type="_BZ9-fMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xq8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute aggregation="composite" association="_BZ9-R8T9EeqdQ-4CeNzdHw" name="" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XrMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XrcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9XrsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9Xl8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XZcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xr8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="CommUnity" visibility="public" xmi:id="_BZ9XsMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XscT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="purpose" type="_BZ9XmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XssT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="addMessage" visibility="public" xmi:id="_BZ9Xs8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XtMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="message" type="_BZ9-G8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9XtcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement isAbstract="true" name="Purpose" xmi:id="_BZ9XtsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="description" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9Xt8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement name="Host" xmi:id="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+              <ownedAttribute association="_BZ9-FcT9EeqdQ-4CeNzdHw" interface="_BZ9XuMT9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XucT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9XusT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9Xu8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-i8T9EeqdQ-4CeNzdHw" interface="_BZ9XuMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-ZsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9XvMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9XvcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedOperation interface="_BZ9XuMT9EeqdQ-4CeNzdHw" name="send" visibility="public" xmi:id="_BZ9XvsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9Xv8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="destination" type="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9XwMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="msg" type="_BZ9-G8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-EMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation interface="_BZ9XuMT9EeqdQ-4CeNzdHw" name="receive" visibility="public" xmi:id="_BZ9-EcT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ9-G8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-EsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="source" type="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-E8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement client="_BZ9XmMT9EeqdQ-4CeNzdHw" supplier="_BZ9XSsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-FMT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement memberEnd="_BZ9XocT9EeqdQ-4CeNzdHw _BZ9XucT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-FcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9Xo8T9EeqdQ-4CeNzdHw _BZ9XncT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-FsT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XpMT9EeqdQ-4CeNzdHw _BZ9XpcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-F8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9Xp8T9EeqdQ-4CeNzdHw _BZ9XqMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-GMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          </packagedElement>
+          <packagedElement clientDependency="_BZ9-Q8T9EeqdQ-4CeNzdHw" name="t2_Composition" xmi:id="_BZ9-GcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <ownedComment annotatedElement="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-GsT9EeqdQ-4CeNzdHw" xmi:type="uml:Comment">
+              <body>Idioma/dialeto, linguagem, capacidade de expressão. Denominações internas, utilizadas no projeto</body>
+            </ownedComment>
+            <packagedElement name="Message" xmi:id="_BZ9-G8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="syn_time_expected" type="_BZ-lmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-HMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="header" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-HcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="source" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-HsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="destination" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-H8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-X8T9EeqdQ-4CeNzdHw" name="" type="_BZ9-SsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-IMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-RsT9EeqdQ-4CeNzdHw" name="" type="_BZ9-LcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-IcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9-IsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9-I8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-YcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-V8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-JMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-lsT9EeqdQ-4CeNzdHw" name="" type="_BZ9-jMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-JcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-R8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-JsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="Message" visibility="public" xmi:id="_BZ9-J8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-KMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="syn_time_expected" type="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-KcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="destination" type="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-KsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="source" type="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-K8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="content" type="_BZ9-LcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-LMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="Content" xmi:id="_BZ9-LcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="content" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-LsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="subject" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-L8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="arctfacts" type="_BZ9-PcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-MMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <defaultValue value="null" xmi:id="_BZ9-McT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralString"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-RMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-PcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-MsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue xmi:id="_BZ9-M8T9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9-NMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-RcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-PcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-NcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9-NsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute aggregation="composite" association="_BZ9-RsT9EeqdQ-4CeNzdHw" name="" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-N8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="Message" visibility="public" xmi:id="_BZ9-OMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-OcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="subject" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-OsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="content" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-O8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="arctifacts" type="_BZ9-PcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-PMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="Artifact" xmi:id="_BZ9-PcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="name" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-PsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="version" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-P8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="data" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-QMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-RMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-LcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-QcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute aggregation="shared" association="_BZ9-RcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-LcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-QsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement client="_BZ9-GcT9EeqdQ-4CeNzdHw" supplier="_BZ9XmMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-Q8T9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement memberEnd="_BZ9-QcT9EeqdQ-4CeNzdHw _BZ9-MsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-RMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-NcT9EeqdQ-4CeNzdHw _BZ9-QsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-RcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-IcT9EeqdQ-4CeNzdHw _BZ9-N8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-RsT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-JsT9EeqdQ-4CeNzdHw _BZ9XrMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-R8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          </packagedElement>
+          <packagedElement clientDependency="_BZ9-XsT9EeqdQ-4CeNzdHw" name="t3_Interaction" xmi:id="_BZ9-SMT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <ownedComment annotatedElement="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ScT9EeqdQ-4CeNzdHw" xmi:type="uml:Comment">
+              <body>Escolha da ferramenta, alteração na escolha da ferramenta</body>
+            </ownedComment>
+            <packagedElement name="Transmission" xmi:id="_BZ9-SsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="send_message" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-S8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="sent_date_hour" type="_BZ9_NcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-TMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="ack" type="_BZ9_EcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-TcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="log_content" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-TsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-X8T9EeqdQ-4CeNzdHw" name="" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-T8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-YMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-V8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-UMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue value="1" xmi:id="_BZ9-UcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9-UsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedOperation name="Transmission" visibility="public" xmi:id="_BZ9-U8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-VMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="send_content" type="_BZ9-G8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-VcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="sent_date_hour" type="_BZ9_NcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-VsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="CommunicationTool" xmi:id="_BZ9-V8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedAttribute name="Name" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-WMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-YMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-SsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-WcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9-WsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-YcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-W8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <lowerValue xmi:id="_BZ9-XMT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralInteger"/>
+                <upperValue value="*" xmi:id="_BZ9-XcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement client="_BZ9-SMT9EeqdQ-4CeNzdHw" supplier="_BZ9-GcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-XsT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement memberEnd="_BZ9-T8T9EeqdQ-4CeNzdHw _BZ9-IMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-X8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-UMT9EeqdQ-4CeNzdHw _BZ9-WcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-YMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-W8T9EeqdQ-4CeNzdHw _BZ9-JMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-YcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          </packagedElement>
+          <packagedElement clientDependency="_BZ9-hsT9EeqdQ-4CeNzdHw _BZ9-h8T9EeqdQ-4CeNzdHw _BZ9-iMT9EeqdQ-4CeNzdHw" name="t4_Evaluation" xmi:id="_BZ9-YsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <ownedComment annotatedElement="_BZ9XQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-Y8T9EeqdQ-4CeNzdHw" xmi:type="uml:Comment">
+              <body>Mineração na comunicação
+Abordagem métrica</body>
+            </ownedComment>
+            <ownedRule constrainedElement="_BZ9-dsT9EeqdQ-4CeNzdHw" context="_BZ9-YsT9EeqdQ-4CeNzdHw" name="int ∈ scores" xmi:id="_BZ9-ZMT9EeqdQ-4CeNzdHw" xmi:type="uml:Constraint">
+              <specification value="int ∈ scores" xmi:id="_BZ9-ZcT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralString"/>
+            </ownedRule>
+            <packagedElement isAbstract="true" name="EvaluationModel" xmi:id="_BZ9-ZsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedTemplateSignature parameter="_BZ9-aMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-Z8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+                <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9-acT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-aMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+                  <ownedParameteredElement name="T" owningTemplateParameter="_BZ9-aMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9-aMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-acT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+                </ownedParameter>
+              </ownedTemplateSignature>
+              <ownedAttribute name="scores" type="_BZ-lmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-asT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="descriptions" type="_BZ9_C8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-a8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="evaluatedClass" visibility="private" xmi:id="_BZ9-bMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-icT9EeqdQ-4CeNzdHw" name="" type="_BZ9-f8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-bcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property">
+                <upperValue value="*" xmi:id="_BZ9-bsT9EeqdQ-4CeNzdHw" xmi:type="uml:LiteralUnlimitedNatural"/>
+              </ownedAttribute>
+              <ownedAttribute association="_BZ9-i8T9EeqdQ-4CeNzdHw" name="" type="_BZ9XuMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-b8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedOperation name="EvaluationModel" visibility="public" xmi:id="_BZ9-cMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ccT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="scores" type="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-csT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="descriptions" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-c8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="classe" type="_BZ9_BsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-dMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="evalhost" type="_BZ9XuMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-dcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="addEvaluation" visibility="public" xmi:id="_BZ9-dsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-d8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="objeto" xmi:id="_BZ9-eMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+                <ownedParameter name="score" type="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ecT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+              <ownedOperation name="getEvaluationList" visibility="public" xmi:id="_BZ9-esT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+                <ownedParameter direction="return" type="_BZ9_QcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-e8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement name="EvalEngine4CommUnit" xmi:id="_BZ9-fMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <generalization general="_BZ9-ZsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-fcT9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+              <ownedAttribute association="_BZ9-isT9EeqdQ-4CeNzdHw" name="" type="_BZ9XnsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-fsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement name="EvaluateObject" xmi:id="_BZ9-f8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+              <ownedTemplateSignature parameter="_BZ9-gcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-gMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+                <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9-gsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-gcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+                  <ownedParameteredElement name="T" owningTemplateParameter="_BZ9-gcT9EeqdQ-4CeNzdHw" templateParameter="_BZ9-gcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-gsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+                </ownedParameter>
+              </ownedTemplateSignature>
+              <ownedAttribute name="objeto" visibility="private" xmi:id="_BZ9-g8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute name="score" type="_BZ-lmsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-hMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+              <ownedAttribute association="_BZ9-icT9EeqdQ-4CeNzdHw" name="" type="_BZ9-ZsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-hcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            </packagedElement>
+            <packagedElement client="_BZ9-YsT9EeqdQ-4CeNzdHw" supplier="_BZ9XmMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-hsT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement client="_BZ9-YsT9EeqdQ-4CeNzdHw" supplier="_BZ9-SMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-h8T9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement client="_BZ9-YsT9EeqdQ-4CeNzdHw" supplier="_BZ9-GcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-iMT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+            <packagedElement memberEnd="_BZ9-bcT9EeqdQ-4CeNzdHw _BZ9-hcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-icT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9-fsT9EeqdQ-4CeNzdHw _BZ9Xq8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-isT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+            <packagedElement memberEnd="_BZ9XvMT9EeqdQ-4CeNzdHw _BZ9-b8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-i8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          </packagedElement>
+          <packagedElement name="IProcess" xmi:id="_BZ9-jMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+            <ownedAttribute association="_BZ9-lcT9EeqdQ-4CeNzdHw" interface="_BZ9-jMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-j8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-jcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9-lsT9EeqdQ-4CeNzdHw" interface="_BZ9-jMT9EeqdQ-4CeNzdHw" name="" type="_BZ9-G8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-jsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement name="ProcessInstance" xmi:id="_BZ9-j8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <ownedAttribute association="_BZ9-lcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-jMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-kMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement clientDependency="_BZ9-ksT9EeqdQ-4CeNzdHw" name="t5_Process" xmi:id="_BZ9-kcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <packagedElement client="_BZ9-kcT9EeqdQ-4CeNzdHw" supplier="_BZ9-GcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ksT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+          </packagedElement>
+          <packagedElement client="_BZ9XSMT9EeqdQ-4CeNzdHw" supplier="_BZ9XRsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-k8T9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+          <packagedElement client="_BZ9XRcT9EeqdQ-4CeNzdHw" supplier="_BZ9XRsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-lMT9EeqdQ-4CeNzdHw" xmi:type="uml:Realization"/>
+          <packagedElement memberEnd="_BZ9-jcT9EeqdQ-4CeNzdHw _BZ9-kMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-lcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+          <packagedElement memberEnd="_BZ9-JcT9EeqdQ-4CeNzdHw _BZ9-jsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-lsT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+        </packagedElement>
+        <packagedElement clientDependency="_BZ9-qcT9EeqdQ-4CeNzdHw _BZ9-qsT9EeqdQ-4CeNzdHw" name="server" xmi:id="_BZ9-l8T9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement name="JAXRSConfiguration" xmi:id="_BZ9-mMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <generalization general="_BZ-leMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-mcT9EeqdQ-4CeNzdHw" xmi:type="uml:Generalization"/>
+          </packagedElement>
+          <packagedElement name="Main" xmi:id="_BZ9-msT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <ownedAttribute association="_BZ9-rcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-n8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-m8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedOperation isStatic="true" name="main" visibility="public" xmi:id="_BZ9-nMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ncT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="args" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-nsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement name="ServiceMessage" xmi:id="_BZ9-n8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <ownedAttribute association="_BZ9-q8T9EeqdQ-4CeNzdHw" name="context" type="_BZ-lecT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-oMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9-rcT9EeqdQ-4CeNzdHw" name="" type="_BZ9-msT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-ocT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedOperation name="ServiceMessage" visibility="public" xmi:id="_BZ9-osT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" xmi:id="_BZ9-o8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getJson" visibility="public" xmi:id="_BZ9-pMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-pcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="putJson" visibility="public" xmi:id="_BZ9-psT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-p8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="content" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-qMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement client="_BZ9-l8T9EeqdQ-4CeNzdHw" supplier="_BZ9XOsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-qcT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+          <packagedElement client="_BZ9-l8T9EeqdQ-4CeNzdHw" supplier="_BZ9-rsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-qsT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+          <packagedElement memberEnd="_BZ9-rMT9EeqdQ-4CeNzdHw _BZ9-oMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-q8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9-q8T9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9-q8T9EeqdQ-4CeNzdHw" type="_BZ9-n8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-rMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9-ocT9EeqdQ-4CeNzdHw _BZ9-m8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-rcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+        </packagedElement>
+        <packagedElement clientDependency="_BZ9-9MT9EeqdQ-4CeNzdHw" name="incoming" xmi:id="_BZ9-rsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement clientDependency="_BZ9-9cT9EeqdQ-4CeNzdHw" name="Message" xmi:id="_BZ9-r8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+            <ownedAttribute name="header" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-sMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute name="message" type="_BZ-lncT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-scT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9-9sT9EeqdQ-4CeNzdHw" name="date" type="_BZ9_NcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-ssT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9--MT9EeqdQ-4CeNzdHw" name="destination" type="_BZ9XRcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-s8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9--sT9EeqdQ-4CeNzdHw" name="communit" type="_BZ9XRMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-tMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9-_MT9EeqdQ-4CeNzdHw" name="source" type="_BZ9XSMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-tcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9-_sT9EeqdQ-4CeNzdHw" name="tool" type="_BZ9XScT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-tsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedAttribute association="_BZ9_AMT9EeqdQ-4CeNzdHw" name="purpose" type="_BZ9XR8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-t8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+            <ownedOperation name="Message" visibility="public" xmi:id="_BZ9-uMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" xmi:id="_BZ9-ucT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="tool" type="_BZ9XScT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-usT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="communit" type="_BZ9XRMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-u8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="purpose" type="_BZ9XR8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-vMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="source" type="_BZ9XSMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-vcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="destination" type="_BZ9XRcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-vsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="date" type="_BZ9_NcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-v8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="header" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-wMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="message" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-wcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getJson" visibility="public" xmi:id="_BZ9-wsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-w8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation isStatic="true" name="putMessage" visibility="public" xmi:id="_BZ9-xMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9-r8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-xcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="JSON" type="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-xsT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getTool" visibility="public" xmi:id="_BZ9-x8T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9XScT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-yMT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setTool" visibility="public" xmi:id="_BZ9-ycT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-ysT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="tool" type="_BZ9XScT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-y8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getCommunit" visibility="public" xmi:id="_BZ9-zMT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9XRMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-zcT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setCommunit" visibility="public" xmi:id="_BZ9-zsT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-z8T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="communit" type="_BZ9XRMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-0MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getPurpose" visibility="public" xmi:id="_BZ9-0cT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9XR8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-0sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setPurpose" visibility="public" xmi:id="_BZ9-08T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-1MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="purpose" type="_BZ9XR8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-1cT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getSource" visibility="public" xmi:id="_BZ9-1sT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9XSMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-18T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setSource" visibility="public" xmi:id="_BZ9-2MT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-2cT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="source" type="_BZ9XSMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-2sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getDestination" visibility="public" xmi:id="_BZ9-28T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9XRcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-3MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setDestination" visibility="public" xmi:id="_BZ9-3cT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-3sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="destination" type="_BZ9XRcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-38T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getDate" visibility="public" xmi:id="_BZ9-4MT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9_NcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-4cT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setDate" visibility="public" xmi:id="_BZ9-4sT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-48T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="date" type="_BZ9_NcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-5MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getHeader" visibility="public" xmi:id="_BZ9-5cT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-5sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setHeader" visibility="public" xmi:id="_BZ9-58T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-6MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="header" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-6cT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getMessage" visibility="public" xmi:id="_BZ9-6sT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-68T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setMessage" visibility="public" xmi:id="_BZ9-7MT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-7cT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="message" type="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9-7sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="getProcess" visibility="public" xmi:id="_BZ9-78T9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ9_A8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-8MT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation name="setProcess" visibility="public" xmi:id="_BZ9-8cT9EeqdQ-4CeNzdHw" xmi:type="uml:Operation">
+              <ownedParameter direction="return" type="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-8sT9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+              <ownedParameter name="process" type="_BZ9_A8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-88T9EeqdQ-4CeNzdHw" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement client="_BZ9-rsT9EeqdQ-4CeNzdHw" supplier="_BZ9XA8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-9MT9EeqdQ-4CeNzdHw" xmi:type="uml:Dependency"/>
+          <packagedElement client="_BZ9-r8T9EeqdQ-4CeNzdHw" supplier="_BZ9_A8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9-9cT9EeqdQ-4CeNzdHw" xmi:type="uml:Usage"/>
+          <packagedElement memberEnd="_BZ9-98T9EeqdQ-4CeNzdHw _BZ9-ssT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-9sT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9-9sT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9-9sT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-98T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9--cT9EeqdQ-4CeNzdHw _BZ9-s8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9--MT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9--MT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9--MT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9--cT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9--8T9EeqdQ-4CeNzdHw _BZ9-tMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9--sT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9--sT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9--sT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9--8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9-_cT9EeqdQ-4CeNzdHw _BZ9-tcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-_MT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9-_MT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9-_MT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-_cT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9-_8T9EeqdQ-4CeNzdHw _BZ9-tsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9-_sT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9-_sT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9-_sT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9-_8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+          <packagedElement memberEnd="_BZ9_AcT9EeqdQ-4CeNzdHw _BZ9-t8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ9_AMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association">
+            <ownedEnd association="_BZ9_AMT9EeqdQ-4CeNzdHw" name="" owningAssociation="_BZ9_AMT9EeqdQ-4CeNzdHw" type="_BZ9-r8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ9_AcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement name="PersistenceUnit" xmi:id="_BZ9_AsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="SWProcess" xmi:id="_BZ9_A8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement name="java" xmi:id="_BZ9_BMT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+      <packagedElement name="lang" xmi:id="_BZ9_BcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+        <packagedElement name="Class" xmi:id="_BZ9_BsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_CMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_B8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_CcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_CMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_CMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_CMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_CcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Object" xmi:id="_BZ9_CsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="String" xmi:id="_BZ9_C8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Cloneable" xmi:id="_BZ9_DMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="Comparable" xmi:id="_BZ9_DcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_D8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_DsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_EMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_D8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="T" owningTemplateParameter="_BZ9_D8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_D8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_EMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Boolean" xmi:id="_BZ9_EcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Byte" xmi:id="_BZ9_EsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Character" xmi:id="_BZ9_E8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Double" xmi:id="_BZ9_FMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Float" xmi:id="_BZ9_FcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Integer" xmi:id="_BZ9_FsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Long" xmi:id="_BZ9_F8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Math" xmi:id="_BZ9_GMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Number" xmi:id="_BZ9_GcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Short" xmi:id="_BZ9_GsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="StringBuffer" xmi:id="_BZ9_G8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="System" xmi:id="_BZ9_HMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Thread" xmi:id="_BZ9_HcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Throwable" xmi:id="_BZ9_HsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Void" xmi:id="_BZ9_H8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Runnable" xmi:id="_BZ9_IMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="Exception" xmi:id="_BZ9_IcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Iterable" xmi:id="_BZ9_IsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_JMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_I8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_JcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_JMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="T" owningTemplateParameter="_BZ9_JMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_JMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_JcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Appendable" xmi:id="_BZ9_JsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="Readable" xmi:id="_BZ9_J8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement isAbstract="true" name="Enum" xmi:id="_BZ9_KMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_KsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_KcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_K8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_KsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_KsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_KsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_K8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="StringBuilder" xmi:id="_BZ9_LMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="CharSequence" xmi:id="_BZ9_LcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="AbstractStringBuilder" xmi:id="_BZ9_LsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="ProcessBuilder" xmi:id="_BZ9_L8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+      </packagedElement>
+      <packagedElement name="util" xmi:id="_BZ9_MMT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+        <packagedElement name="List" xmi:id="_BZ9_McT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_M8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_MsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_NMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_M8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_M8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_M8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_NMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Date" xmi:id="_BZ9_NcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="ArrayList" xmi:id="_BZ9_NsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_OMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_N8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_OcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_OMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_OMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_OMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_OcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Arrays" xmi:id="_BZ9_OsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="BitSet" xmi:id="_BZ9_O8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Calendar" xmi:id="_BZ9_PMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Collection" xmi:id="_BZ9_PcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_P8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_PsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_QMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_P8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_P8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_P8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_QMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Collections" xmi:id="_BZ9_QcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Comparator" xmi:id="_BZ9_QsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_RMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_Q8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_RcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_RMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="T" owningTemplateParameter="_BZ9_RMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_RMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_RcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Currency" xmi:id="_BZ9_RsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Dictionary" xmi:id="_BZ9_R8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_ScT9EeqdQ-4CeNzdHw _BZ9_S8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_SMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_SsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ScT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_ScT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_ScT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_SsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_TMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_S8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_S8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_S8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_TMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Enumeration" xmi:id="_BZ9_TcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_T8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_TsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_UMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_T8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_T8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_T8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_UMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="EventListener" xmi:id="_BZ9_UcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="EventListenerProxy" xmi:id="_BZ9_UsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="EventObject" xmi:id="_BZ9_U8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="HashMap" xmi:id="_BZ9_VMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_VsT9EeqdQ-4CeNzdHw _BZ9_WMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_VcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_V8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_VsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_VsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_VsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_V8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_WcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_WMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_WMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_WMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_WcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="HashSet" xmi:id="_BZ9_WsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_XMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_W8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_XcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_XMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_XMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_XMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_XcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Hashtable" xmi:id="_BZ9_XsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_YMT9EeqdQ-4CeNzdHw _BZ9_YsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_X8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_YcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_YMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_YMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_YMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_YcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_Y8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_YsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_YsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_YsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_Y8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="IdentityHashMap" xmi:id="_BZ9_ZMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_ZsT9EeqdQ-4CeNzdHw _BZ9_aMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ZcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_Z8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ZsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_ZsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_ZsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_Z8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_acT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_aMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_aMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_aMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_acT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Iterator" xmi:id="_BZ9_asT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_bMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_a8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_bcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_bMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_bMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_bMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_bcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="LinkedHashMap" xmi:id="_BZ9_bsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_cMT9EeqdQ-4CeNzdHw _BZ9_csT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_b8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_ccT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_cMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_cMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_cMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ccT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_c8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_csT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_csT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_csT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_c8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="LinkedHashSet" xmi:id="_BZ9_dMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_dsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_dcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_d8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_dsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_dsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_dsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_d8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="LinkedList" xmi:id="_BZ9_eMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_esT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ecT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_e8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_esT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_esT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_esT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_e8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="ListIterator" xmi:id="_BZ9_fMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_fsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_fcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_f8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_fsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_fsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_fsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_f8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Map" xmi:id="_BZ9_gMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_gsT9EeqdQ-4CeNzdHw _BZ9_hMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_gcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_g8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_gsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_gsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_gsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_g8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_hcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_hMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_hMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_hMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_hcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Observable" xmi:id="_BZ9_hsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Observer" xmi:id="_BZ9_h8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="Set" xmi:id="_BZ9_iMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_isT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_icT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_i8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_isT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_isT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_isT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_i8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="SortedMap" xmi:id="_BZ9_jMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_jsT9EeqdQ-4CeNzdHw _BZ9_kMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_jcT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_j8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_jsT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_jsT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_jsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_j8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_kcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_kMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_kMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_kMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_kcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="SortedSet" xmi:id="_BZ9_ksT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ9_lMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_k8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_lcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_lMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_lMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_lMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_lcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Stack" xmi:id="_BZ9_lsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_mMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_l8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_mcT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_mMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ9_mMT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_mMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_mcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="StringTokenizer" xmi:id="_BZ9_msT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="TreeMap" xmi:id="_BZ9_m8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ9_ncT9EeqdQ-4CeNzdHw _BZ9_n8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_nMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_nsT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_ncT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ9_ncT9EeqdQ-4CeNzdHw" templateParameter="_BZ9_ncT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_nsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ9_oMT9EeqdQ-4CeNzdHw" xmi:id="_BZ9_n8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ9_n8T9EeqdQ-4CeNzdHw" templateParameter="_BZ9_n8T9EeqdQ-4CeNzdHw" xmi:id="_BZ9_oMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="TreeSet" xmi:id="_BZ9_ocT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lIcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lIMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lIsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lIcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lIcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lIcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lIsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Vector" xmi:id="_BZ-lI8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lJcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lJMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lJsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lJcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lJcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lJcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lJsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="WeakHashMap" xmi:id="_BZ-lJ8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lKcT9EeqdQ-4CeNzdHw _BZ-lK8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lKMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lKsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lKcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ-lKcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lKcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lKsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lLMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lK8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ-lK8T9EeqdQ-4CeNzdHw" templateParameter="_BZ-lK8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lLMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="RandomAccess" xmi:id="_BZ-lLcT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="BlockingQueue" xmi:id="_BZ-lLsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ-lMMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lL8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lMcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lMMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lMMT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lMMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lMcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Queue" xmi:id="_BZ-lMsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ-lNMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lM8T9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lNcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lNMT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lNMT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lNMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lNcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Formattable" xmi:id="_BZ-lNsT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface"/>
+        <packagedElement name="AbstractQueue" xmi:id="_BZ-lN8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lOcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lOMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lOsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lOcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lOcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lOcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lOsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="EnumMap" xmi:id="_BZ-lO8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lPcT9EeqdQ-4CeNzdHw _BZ-lP8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lPMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lPsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lPcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ-lPcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lPcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lPsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lQMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lP8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ-lP8T9EeqdQ-4CeNzdHw" templateParameter="_BZ-lP8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lQMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="EnumSet" xmi:id="_BZ-lQcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lQ8T9EeqdQ-4CeNzdHw _BZ-lRcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lQsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lRMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lQ8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="K" owningTemplateParameter="_BZ-lQ8T9EeqdQ-4CeNzdHw" templateParameter="_BZ-lQ8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lRMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lRsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lRcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="V" owningTemplateParameter="_BZ-lRcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lRcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lRsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="FormattableFlags" xmi:id="_BZ-lR8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="Formatter" xmi:id="_BZ-lSMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="PriorityQueue" xmi:id="_BZ-lScT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lS8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lSsT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lTMT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lS8T9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lS8T9EeqdQ-4CeNzdHw" templateParameter="_BZ-lS8T9EeqdQ-4CeNzdHw" xmi:id="_BZ-lTMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Scanner" xmi:id="_BZ-lTcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="UUID" xmi:id="_BZ-lTsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="BlockingDeque" xmi:id="_BZ-lT8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ-lUcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lUMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lUsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lUcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lUcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lUcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lUsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Deque" xmi:id="_BZ-lU8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ-lVcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lVMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lVsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lVcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lVcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lVcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lVsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="NavigableSet" xmi:id="_BZ-lV8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+          <ownedTemplateSignature parameter="_BZ-lWcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lWMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lWsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lWcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lWcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lWcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lWsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="ArrayDeque" xmi:id="_BZ-lW8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lXcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lXMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lXsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lXcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lXcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lXcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lXsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="ConcurrentSkipListMap" xmi:id="_BZ-lX8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lYcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lYMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lYsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lYcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lYcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lYcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lYsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="ConcurrentSkipListSet" xmi:id="_BZ-lY8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lZcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lZMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lZsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lZcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="E" owningTemplateParameter="_BZ-lZcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lZcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lZsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="ServiceLoader" xmi:id="_BZ-lZ8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lacT9EeqdQ-4CeNzdHw" xmi:id="_BZ-laMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lasT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lacT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="S" owningTemplateParameter="_BZ-lacT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lacT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lasT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="Optional" xmi:id="_BZ-la8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_BZ-lbcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lbMT9EeqdQ-4CeNzdHw" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter allowSubstitutable="false" parameteredElement="_BZ-lbsT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lbcT9EeqdQ-4CeNzdHw" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="T" owningTemplateParameter="_BZ-lbcT9EeqdQ-4CeNzdHw" templateParameter="_BZ-lbcT9EeqdQ-4CeNzdHw" xmi:id="_BZ-lbsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement name="OptionalDouble" xmi:id="_BZ-lb8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="OptionalInt" xmi:id="_BZ-lcMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+        <packagedElement name="OptionalLong" xmi:id="_BZ-lccT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement name="javax" xmi:id="_BZ-lcsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+      <packagedElement name="persistence" xmi:id="_BZ-lc8T9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+        <packagedElement name="EntityManager" xmi:id="_BZ-ldMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+      </packagedElement>
+      <packagedElement name="ws" xmi:id="_BZ-ldcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+        <packagedElement name="rs" xmi:id="_BZ-ldsT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+          <packagedElement name="core" xmi:id="_BZ-ld8T9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+            <packagedElement name="Application" xmi:id="_BZ-leMT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+            <packagedElement name="UriInfo" xmi:id="_BZ-lecT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement name="listenbot" xmi:id="_BZ-lesT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+    <packagedElement name="Node CFDSD" xmi:id="_BZ-le8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+      <ownedAttribute association="_BZ-lmMT9EeqdQ-4CeNzdHw" name="" type="_BZ-liMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lfMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="Note Bot" xmi:id="_BZ-lfcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+      <ownedAttribute association="_BZ-lksT9EeqdQ-4CeNzdHw" name="" type="_BZ-ljMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lfsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-llMT9EeqdQ-4CeNzdHw" name="" type="_BZ-liMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lf8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-llcT9EeqdQ-4CeNzdHw" name="" type="_BZ-liMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lgMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-llsT9EeqdQ-4CeNzdHw" name="" type="_BZ-lj8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lgcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="NodeTools" xmi:id="_BZ-lgsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class">
+      <ownedAttribute association="_BZ-lk8T9EeqdQ-4CeNzdHw" name="" type="_BZ-ljMT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lg8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-ll8T9EeqdQ-4CeNzdHw" name="" type="_BZ-lj8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lhMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="slack" xmi:id="_BZ-lhcT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+    <packagedElement name="e-mail" xmi:id="_BZ-lhsT9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+    <packagedElement name="github" xmi:id="_BZ-lh8T9EeqdQ-4CeNzdHw" xmi:type="uml:Class"/>
+    <packagedElement name="http/json" xmi:id="_BZ-liMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+      <ownedAttribute association="_BZ-llMT9EeqdQ-4CeNzdHw" interface="_BZ-liMT9EeqdQ-4CeNzdHw" name="" type="_BZ-lfcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-licT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-llcT9EeqdQ-4CeNzdHw" interface="_BZ-liMT9EeqdQ-4CeNzdHw" name="" type="_BZ-lfcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lisT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-lmMT9EeqdQ-4CeNzdHw" interface="_BZ-liMT9EeqdQ-4CeNzdHw" name="" type="_BZ-le8T9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-li8T9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="API/JSON" xmi:id="_BZ-ljMT9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+      <ownedAttribute association="_BZ-lksT9EeqdQ-4CeNzdHw" interface="_BZ-ljMT9EeqdQ-4CeNzdHw" name="" type="_BZ-lfcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-ljcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-lk8T9EeqdQ-4CeNzdHw" interface="_BZ-ljMT9EeqdQ-4CeNzdHw" name="" type="_BZ-lgsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-ljsT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="Protocol" xmi:id="_BZ-lj8T9EeqdQ-4CeNzdHw" xmi:type="uml:Interface">
+      <ownedAttribute association="_BZ-llsT9EeqdQ-4CeNzdHw" interface="_BZ-lj8T9EeqdQ-4CeNzdHw" name="" type="_BZ-lfcT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lkMT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+      <ownedAttribute association="_BZ-ll8T9EeqdQ-4CeNzdHw" interface="_BZ-lj8T9EeqdQ-4CeNzdHw" name="" type="_BZ-lgsT9EeqdQ-4CeNzdHw" visibility="private" xmi:id="_BZ-lkcT9EeqdQ-4CeNzdHw" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement memberEnd="_BZ-ljcT9EeqdQ-4CeNzdHw _BZ-lfsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-lksT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-lg8T9EeqdQ-4CeNzdHw _BZ-ljsT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-lk8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-licT9EeqdQ-4CeNzdHw _BZ-lf8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-llMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-lisT9EeqdQ-4CeNzdHw _BZ-lgMT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-llcT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-lkMT9EeqdQ-4CeNzdHw _BZ-lgcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-llsT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-lhMT9EeqdQ-4CeNzdHw _BZ-lkcT9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-ll8T9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_BZ-lfMT9EeqdQ-4CeNzdHw _BZ-li8T9EeqdQ-4CeNzdHw" name="" xmi:id="_BZ-lmMT9EeqdQ-4CeNzdHw" xmi:type="uml:Association"/>
+    <packagedElement name="PrimitiveTypes" xmi:id="_BZ-lmcT9EeqdQ-4CeNzdHw" xmi:type="uml:Package">
+      <packagedElement name="int" xmi:id="_BZ-lmsT9EeqdQ-4CeNzdHw" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="void" xmi:id="_BZ-lm8T9EeqdQ-4CeNzdHw" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="boolean" xmi:id="_BZ-lnMT9EeqdQ-4CeNzdHw" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="byte" xmi:id="_BZ-lncT9EeqdQ-4CeNzdHw" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="float" xmi:id="_BZ-lnsT9EeqdQ-4CeNzdHw" xmi:type="uml:PrimitiveType"/>
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>
